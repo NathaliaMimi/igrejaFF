@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo — Igreja Família Filadélfia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50: '#fdfbeb', 100: '#faf3c7', 200: '#f4e38e', 300: '#ecce4f', 400: '#e3b522', 500: '#D4AF37', 600: '#b89028', 700: '#946f20', 800: '#75551c', 900: '#61461a' },
+                        dark: { DEFAULT: '#1A1A1A', card: '#242424', input: '#2D2D2D', pure: '#121212' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/40">
+                        <img src="image_394705.png" alt="Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-extrabold tracking-wider uppercase leading-none">Igreja Família</span>
+                        <span class="text-gold-500 font-medium text-xs tracking-[0.2em] uppercase leading-none mt-1">Filadélfia</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Início</a>
+                    <a href="quem-somos.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Quem Somos</a>
+                    <a href="doacoes.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Doações</a>
+                    <a href="ajuda.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Solicitar Ajuda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HEADER DA PÁGINA -->
+        <section class="py-12 bg-dark-pure border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-gold-500 uppercase">GESTÃO SOCIAL</span>
+                    <h1 class="text-3xl font-extrabold text-white mt-1">Painel Administrativo</h1>
+                </div>
+                <div class="flex items-center space-x-2 text-xs text-gray-400">
+                    <span>Acesso Autorizado</span>
+                    <div class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD DE ESTATÍSTICAS -->
+        <section class="py-10 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                    <!-- Pedidos Pendentes -->
+                    <div class="glass-card p-6 rounded-3xl flex items-center space-x-5">
+                        <div class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Pedidos Pendentes</span>
+                            <h4 class="text-3xl font-extrabold text-white mt-1" id="stat-pending">0</h4>
+                        </div>
+                    </div>
+                    <!-- Doações Oferecidas -->
+                    <div class="glass-card p-6 rounded-3xl flex items-center space-x-5">
+                        <div class="w-14 h-14 bg-green-500/10 text-green-500 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Doações Registradas</span>
+                            <h4 class="text-3xl font-extrabold text-white mt-1" id="stat-donations">12</h4>
+                        </div>
+                    </div>
+                    <!-- Famílias Atendidas -->
+                    <div class="glass-card p-6 rounded-3xl flex items-center space-x-5">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-house-circle-check"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block">Famílias Atendidas</span>
+                            <h4 class="text-3xl font-extrabold text-white mt-1">428</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABELA E FILTROS -->
+                <div class="glass-card rounded-3xl overflow-hidden border border-white/5">
+                    <div class="p-6 border-b border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Solicitações de Assistência</h3>
+                        </div>
+                        <!-- BUSCA E FILTROS -->
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <div class="relative">
+                                <input type="text" id="admin-search" placeholder="Buscar..." class="w-full bg-dark-input border border-white/10 rounded-xl pl-10 pr-4 py-2 text-sm text-white">
+                                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-gray-500 text-xs"></i>
+                            </div>
+                            <select id="admin-filter" class="bg-dark-input border border-white/10 rounded-xl px-4 py-2 text-sm text-white">
+                                <option value="todos">Todos Status</option>
+                                <option value="Pendente">Pendente</option>
+                                <option value="Aprovado">Aprovado</option>
+                                <option value="Atendido">Atendido</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- TABELA RESPONSIVA -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-white/5 text-gray-300 text-xs uppercase tracking-wider border-b border-white/10">
+                                <tr>
+                                    <th class="px-6 py-4">Beneficiário</th>
+                                    <th class="px-6 py-4">Bairro</th>
+                                    <th class="px-6 py-4">Pessoas no Lar</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4 text-right">Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/5 text-gray-300" id="admin-table-body">
+                                <!-- Preenchido de forma dinâmica via script.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DETALHE (VISUALIZAR DETALHADO) -->
+    <div id="modal-detail" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-dark-pure/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-lg w-full p-8 rounded-3xl border border-white/15">
+            <h3 class="text-xl font-extrabold text-white mb-4">Detalhes da Solicitação</h3>
+            <hr class="border-white/10 mb-6">
+            <div id="detail-content" class="space-y-4 text-sm text-gray-300">
+                <!-- Preenchido dinamicamente -->
+            </div>
+            <div class="mt-8 flex justify-end space-x-3">
+                <button onclick="closeDetailModal()" class="px-5 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded-xl">Fechar</button>
+                <button onclick="approveRequestFromDetail()" class="px-5 py-2.5 bg-gold-500 text-dark font-medium rounded-xl" id="btn-approve-action">Aprovar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE SUCESSO -->
+    <div id="modal-success" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-dark-pure/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full p-8 rounded-3xl text-center border-2 border-gold-500/30">
+            <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2" id="modal-title">Sucesso!</h3>
+            <p class="text-gray-300 text-sm mb-8" id="modal-message"></p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 bg-gold-500 text-dark font-semibold rounded-xl">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* --- ESTILOS CUSTOMIZADOS GERAIS --- */
+body {
+    background-color: #121212;
+    color: #F3F4F6;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar Premium */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b89028;
+}
+
+/* Efeito de Vidro (Glassmorphism) para Navegação e Cards */
+.glass-nav {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card {
+    background: rgba(36, 36, 36, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+}
+
+/* Brilho Dourado Sob o Texto Principal */
+.text-glow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+}
+
+/* Estilização para Inputs Focados */
+input:focus, select:focus, textarea:focus {
+    border-color: #D4AF37 !important;
+    box-shadow: 0 0 0 1px #D4AF37 !important;
+}

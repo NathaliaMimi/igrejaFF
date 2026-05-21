@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações — Igreja Família Filadélfia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50: '#fdfbeb', 100: '#faf3c7', 200: '#f4e38e', 300: '#ecce4f', 400: '#e3b522', 500: '#D4AF37', 600: '#b89028', 700: '#946f20', 800: '#75551c', 900: '#61461a' },
+                        dark: { DEFAULT: '#1A1A1A', card: '#242424', input: '#2D2D2D', pure: '#121212' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/40">
+                        <img src="image_394705.png" alt="Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-extrabold tracking-wider uppercase leading-none">Igreja Família</span>
+                        <span class="text-gold-500 font-medium text-xs tracking-[0.2em] uppercase leading-none mt-1">Filadélfia</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Início</a>
+                    <a href="quem-somos.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Quem Somos</a>
+                    <a href="doacoes.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Doações</a>
+                    <a href="ajuda.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Solicitar Ajuda</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="admin.html" class="nav-btn flex items-center space-x-2 px-5 py-2.5 rounded-full border border-gold-500/30 text-gold-500 text-sm hover:bg-gold-500 hover:text-dark transition">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HEADER DA PÁGINA -->
+        <section class="py-20 bg-dark-pure border-b border-white/5">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">SOLIDARIEDADE CRISTÃ</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-6">Nossas Necessidades</h1>
+                <p class="text-lg text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                    Nos ajude a manter o estoque social abastecido. Veja as maiores necessidades das famílias que assistimos:
+                </p>
+            </div>
+        </section>
+
+        <!-- CARDS DE PROGRESSO -->
+        <section class="py-16 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    <!-- Arroz -->
+                    <div class="glass-card p-6 rounded-3xl relative">
+                        <span class="absolute top-6 right-6 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-red-500/10 text-red-500 border border-red-500/20">Urgente</span>
+                        <div class="w-12 h-12 bg-gold-500/10 text-gold-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Arroz</h4>
+                        <div class="flex items-center justify-between text-xs mb-1.5 text-gray-300">
+                            <span>Estoque Atual: 35%</span>
+                            <span class="text-red-500">Meta: 100 kg</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                            <div class="bg-red-500 h-full" style="width: 35%"></div>
+                        </div>
+                    </div>
+                    <!-- Feijão -->
+                    <div class="glass-card p-6 rounded-3xl relative">
+                        <span class="absolute top-6 right-6 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-orange-500/10 text-orange-500 border border-orange-500/20">Crítico</span>
+                        <div class="w-12 h-12 bg-gold-500/10 text-gold-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Feijão</h4>
+                        <div class="flex items-center justify-between text-xs mb-1.5 text-gray-300">
+                            <span>Estoque Atual: 50%</span>
+                            <span class="text-orange-500">Meta: 80 kg</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                            <div class="bg-orange-500 h-full" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <!-- Leite -->
+                    <div class="glass-card p-6 rounded-3xl relative">
+                        <span class="absolute top-6 right-6 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-red-500/10 text-red-500 border border-red-500/20">Urgente</span>
+                        <div class="w-12 h-12 bg-gold-500/10 text-gold-500 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Leite</h4>
+                        <div class="flex items-center justify-between text-xs mb-1.5 text-gray-300">
+                            <span>Estoque Atual: 20%</span>
+                            <span class="text-red-500">Meta: 150 L</span>
+                        </div>
+                        <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                            <div class="bg-red-500 h-full" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULÁRIO -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-dark-card border border-white/5 rounded-3xl p-8 sm:p-12">
+                        <div class="text-center mb-8">
+                            <h3 class="text-2xl font-bold text-white">Registrar Intenção de Doação</h3>
+                            <p class="text-gray-400 text-sm mt-2">Nossos voluntários agendarão a retirada física dos alimentos.</p>
+                        </div>
+                        <form id="donation-form" class="space-y-6" novalidate>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="donation-name">Nome Completo</label>
+                                    <input type="text" id="donation-name" placeholder="Seu nome" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                    <p class="text-red-500 text-xs mt-1 hidden" id="err-donation-name">Campo obrigatório.</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="donation-phone">Telefone / WhatsApp</label>
+                                    <input type="tel" id="donation-phone" placeholder="(11) 99999-9999" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                    <p class="text-red-500 text-xs mt-1 hidden" id="err-donation-phone">Informe um telefone válido.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="donation-item">Item para Doação</label>
+                                    <select id="donation-item" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                        <option value="" disabled selected>Selecione...</option>
+                                        <option value="Arroz">Arroz</option>
+                                        <option value="Feijão">Feijão</option>
+                                        <option value="Leite">Leite</option>
+                                        <option value="Roupas">Roupas</option>
+                                        <option value="Brinquedos">Brinquedos</option>
+                                        <option value="Higiene Pessoal">Higiene Pessoal</option>
+                                    </select>
+                                    <p class="text-red-500 text-xs mt-1 hidden" id="err-donation-item">Selecione um item.</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="donation-quantity">Quantidade</label>
+                                    <input type="number" id="donation-quantity" min="1" placeholder="Ex: 5" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                    <p class="text-red-500 text-xs mt-1 hidden" id="err-donation-quantity">Informe uma quantidade válida.</p>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full py-4 bg-gold-500 text-dark font-semibold rounded-xl hover:bg-gold-400 transition-all shadow-lg">
+                                Registrar Doação
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE SUCESSO -->
+    <div id="modal-success" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-dark-pure/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full p-8 rounded-3xl text-center border-2 border-gold-500/30">
+            <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2" id="modal-title">Sucesso!</h3>
+            <p class="text-gray-300 text-sm mb-8" id="modal-message"></p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 bg-gold-500 text-dark font-semibold rounded-xl">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

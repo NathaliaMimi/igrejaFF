@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos — Igreja Família Filadélfia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50: '#fdfbeb', 100: '#faf3c7', 200: '#f4e38e', 300: '#ecce4f', 400: '#e3b522', 500: '#D4AF37', 600: '#b89028', 700: '#946f20', 800: '#75551c', 900: '#61461a' },
+                        dark: { DEFAULT: '#1A1A1A', card: '#242424', input: '#2D2D2D', pure: '#121212' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/40">
+                        <img src="image_394705.png" alt="Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-extrabold tracking-wider uppercase leading-none">Igreja Família</span>
+                        <span class="text-gold-500 font-medium text-xs tracking-[0.2em] uppercase leading-none mt-1">Filadélfia</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Início</a>
+                    <a href="quem-somos.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Quem Somos</a>
+                    <a href="doacoes.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Doações</a>
+                    <a href="ajuda.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Solicitar Ajuda</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="admin.html" class="nav-btn flex items-center space-x-2 px-5 py-2.5 rounded-full border border-gold-500/30 text-gold-500 text-sm hover:bg-gold-500 hover:text-dark transition">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HEADER DA PÁGINA -->
+        <section class="py-20 bg-dark-pure relative">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">Nossa Identidade</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-6">Quem Somos</h1>
+                <p class="text-lg text-gray-300 font-light leading-relaxed">
+                    "Somos a Igreja Família Filadélfia, uma igreja cristã pentecostal, fundamentada na Palavra de Deus, guiada pelo Espírito Santo e comprometida com uma fé viva, bíblica e transformadora."
+                </p>
+            </div>
+        </section>
+
+        <!-- CENTRALIDADE EM JESUS -->
+        <section class="py-12 bg-dark">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="glass-card p-10 rounded-3xl text-center border border-gold-500/20">
+                    <i class="fa-solid fa-crown text-gold-500 text-4xl mb-6"></i>
+                    <h2 class="text-2xl font-extrabold text-white uppercase tracking-wider mb-4">Centralidade em Jesus</h2>
+                    <p class="text-lg sm:text-xl text-gray-200 italic leading-relaxed">
+                        “Somos uma igreja centralizada em Jesus Cristo. Vivemos para Ele, por Ele e aguardamos com fé a Sua volta.”
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NO QUE CREMOS / VALORES -->
+        <section class="py-20 bg-dark-pure">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- NO QUE CREMOS -->
+                    <div>
+                        <div class="flex items-center space-x-3 mb-8">
+                            <span class="w-10 h-0.5 bg-gold-500"></span>
+                            <h3 class="text-2xl font-extrabold text-white">No que Cremos</h3>
+                        </div>
+                        <ul class="space-y-6 text-sm">
+                            <li class="flex items-start space-x-4">
+                                <div class="w-6 h-6 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-base">Bíblia como autoridade máxima</h4>
+                                    <p class="text-gray-400 mt-0.5">Nossa única regra infalível de fé, prática e conduta diária.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-4">
+                                <div class="w-6 h-6 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-base">Jesus Cristo como Senhor e Salvador</h4>
+                                    <p class="text-gray-400 mt-0.5">Caminho definitivo de salvação e reconciliação com o Pai.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-4">
+                                <div class="w-6 h-6 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-500 flex-shrink-0 mt-1">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold text-base">Dons e atuação viva do Espírito Santo</h4>
+                                    <p class="text-gray-400 mt-0.5">O mover pentecostal com o batismo e operação dos dons espirituais no dia a dia.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- VALORES -->
+                    <div>
+                        <div class="flex items-center space-x-3 mb-8">
+                            <span class="w-10 h-0.5 bg-gold-500"></span>
+                            <h3 class="text-2xl font-extrabold text-white">Nossos Valores</h3>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="p-6 rounded-2xl bg-dark border border-white/5">
+                                <span class="text-gold-500 font-bold text-lg block mb-1">01</span>
+                                <h4 class="text-white font-bold text-sm mb-1">Família</h4>
+                                <p class="text-gray-400 text-xs">Base e estrutura de ensino e amor criada por Deus.</p>
+                            </div>
+                            <div class="p-6 rounded-2xl bg-dark border border-white/5">
+                                <span class="text-gold-500 font-bold text-lg block mb-1">02</span>
+                                <h4 class="text-white font-bold text-sm mb-1">Comunhão</h4>
+                                <p class="text-gray-400 text-xs">Relacionamento puro, sincero e acolhedor entre irmãos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIDERANÇA -->
+        <section class="py-24 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">NOSSOS PASTORES</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2">Liderança</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-card p-6 text-center rounded-3xl">
+                        <div class="w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-zinc-600">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="text-white font-bold">Pastor Luiz</h4>
+                        <p class="text-gold-500 text-xs mt-1">Pastor Sênior</p>
+                    </div>
+                    <div class="glass-card p-6 text-center rounded-3xl">
+                        <div class="w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-zinc-600">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="text-white font-bold">Pastora Cidinha</h4>
+                        <p class="text-gold-500 text-xs mt-1">Pastora Sênior</p>
+                    </div>
+                    <div class="glass-card p-6 text-center rounded-3xl">
+                        <div class="w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-zinc-600">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="text-white font-bold">Pr. Guilherme Avallone</h4>
+                        <p class="text-gold-500 text-xs mt-1">Pastor Adjunto</p>
+                    </div>
+                    <div class="glass-card p-6 text-center rounded-3xl">
+                        <div class="w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-zinc-600">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4 class="text-white font-bold">Bruna Avallone</h4>
+                        <p class="text-gold-500 text-xs mt-1">Líder de Adoradores</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-pure border-t border-white/10 pt-12 pb-8 text-sm text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs">© 2026 Igreja Família Filadélfia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Ajuda — Igreja Família Filadélfia</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50: '#fdfbeb', 100: '#faf3c7', 200: '#f4e38e', 300: '#ecce4f', 400: '#e3b522', 500: '#D4AF37', 600: '#b89028', 700: '#946f20', 800: '#75551c', 900: '#61461a' },
+                        dark: { DEFAULT: '#1A1A1A', card: '#242424', input: '#2D2D2D', pure: '#121212' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/40">
+                        <img src="image_394705.png" alt="Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-extrabold tracking-wider uppercase leading-none">Igreja Família</span>
+                        <span class="text-gold-500 font-medium text-xs tracking-[0.2em] uppercase leading-none mt-1">Filadélfia</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-1">
+                    <a href="index.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Início</a>
+                    <a href="quem-somos.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Quem Somos</a>
+                    <a href="doacoes.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Doações</a>
+                    <a href="ajuda.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition duration-300">Solicitar Ajuda</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="admin.html" class="nav-btn flex items-center space-x-2 px-5 py-2.5 rounded-full border border-gold-500/30 text-gold-500 text-sm hover:bg-gold-500 hover:text-dark transition">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HEADER DA PÁGINA -->
+        <section class="py-20 bg-dark-pure border-b border-white/5">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">ACOLHIMENTO CONFIDENCIAL</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-6">Solicitar Ajuda</h1>
+                <p class="text-lg text-gray-300 font-light max-w-2xl mx-auto">
+                    A igreja Família Filadélfia está de portas abertas. Se você ou sua família necessitam de cestas básicas ou vestuário, registre o seu pedido abaixo.
+                </p>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <section class="py-16 bg-dark">
+            <div class="max-w-3xl mx-auto px-4">
+                <div class="bg-dark-card border border-white/5 rounded-3xl p-8 sm:p-12">
+                    <form id="help-form" class="space-y-6" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-name">Nome Completo</label>
+                                <input type="text" id="help-name" placeholder="Seu nome" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-name">O nome completo é obrigatório.</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-cpf">CPF</label>
+                                <input type="text" id="help-cpf" placeholder="000.000.000-00" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-cpf">Informe um CPF real válido.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="help-phone" placeholder="(11) 99999-9999" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-phone">Telefone inválido.</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-income">Renda Familiar Mensal</label>
+                                <select id="help-income" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="Nenhuma renda">Não possuo renda</option>
+                                    <option value="Até 1 Salário">Até 1 Salário Mínimo</option>
+                                    <option value="De 1 a 2 Salários">De 1 a 2 Salários Mínimos</option>
+                                </select>
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-income">Selecione uma opção.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-address">Endereço Residencial</label>
+                                <input type="text" id="help-address" placeholder="Rua e número" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-address">Endereço obrigatório.</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-suburb">Bairro</label>
+                                <input type="text" id="help-suburb" placeholder="Bairro" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-suburb">Bairro obrigatório.</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-family-size">Residentes no Lar</label>
+                                <input type="number" id="help-family-size" placeholder="Quantidade" min="1" class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white">
+                                <p class="text-red-500 text-xs mt-1 hidden" id="err-help-family-size">Mínimo de 1 pessoa.</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2">Comprovante Residencial (Simulado)</label>
+                                <div class="bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 text-sm">Upload fictício integrado</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-300 text-xs font-medium uppercase tracking-wider mb-2" for="help-desc">Sua Necessidade</label>
+                            <textarea id="help-desc" rows="4" placeholder="Descreva de forma sincera suas carências..." class="w-full bg-dark-input border border-white/10 rounded-xl px-4 py-3.5 text-white"></textarea>
+                            <p class="text-red-500 text-xs mt-1 hidden" id="err-help-desc">Escreva detalhadamente (mínimo de 15 caracteres).</p>
+                        </div>
+
+                        <div class="relative flex items-start">
+                            <input type="checkbox" id="help-lgpd" class="h-4.5 w-4.5 text-gold-500 border-white/10 bg-dark-input rounded mt-1">
+                            <label for="help-lgpd" class="ml-3 text-xs text-gray-400 font-medium">Declaro consentimento para que meus dados sejam tratados de forma totalmente confidencial e privada pela equipe de pastoreio social da igreja.</label>
+                        </div>
+                        <p class="text-red-500 text-xs hidden" id="err-help-lgpd">O consentimento dos dados é obrigatório.</p>
+
+                        <button type="submit" class="w-full py-4 bg-gold-500 text-dark font-semibold rounded-xl hover:bg-gold-400 transition-all shadow-lg">
+                            Enviar Solicitação de Ajuda
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE SUCESSO -->
+    <div id="modal-success" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-dark-pure/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full p-8 rounded-3xl text-center border-2 border-gold-500/30">
+            <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2" id="modal-title">Enviado!</h3>
+            <p class="text-gray-300 text-sm mb-8" id="modal-message"></p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 bg-gold-500 text-dark font-semibold rounded-xl">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>''

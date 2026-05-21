@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Família Filadélfia — Centralizados em Jesus, movidos pelo amor</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para ícones premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Importa o CSS customizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50: '#fdfbeb', 100: '#faf3c7', 200: '#f4e38e', 300: '#ecce4f', 400: '#e3b522', 500: '#D4AF37', 600: '#b89028', 700: '#946f20', 800: '#75551c', 900: '#61461a' },
+                        dark: { DEFAULT: '#1A1A1A', card: '#242424', input: '#2D2D2D', pure: '#121212' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER FIXO -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO OFICIAL -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/40 shadow-lg shadow-gold-500/10">
+                        <img src="image_394705.png" alt="Logo Igreja Família Filadélfia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/150x150/ffffff/1a1a1a?text=IFF';">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-extrabold tracking-wider text-base sm:text-lg uppercase leading-none group-hover:text-gold-400 transition-colors duration-300">Igreja Família</span>
+                        <span class="text-gold-500 font-medium text-xs tracking-[0.2em] uppercase leading-none mt-1">Filadélfia</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden md:flex space-x-1 lg:space-x-2">
+                    <a href="index.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition-all duration-300">Início</a>
+                    <a href="quem-somos.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition-all duration-300">Quem Somos</a>
+                    <a href="doacoes.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition-all duration-300">Doações</a>
+                    <a href="ajuda.html" class="nav-btn px-4 py-2 text-sm font-medium rounded-full text-gray-300 hover:text-gold-500 hover:bg-white/5 transition-all duration-300">Solicitar Ajuda</a>
+                </nav>
+
+                <!-- BOTÃO ADMIN (DESKTOP) -->
+                <div class="hidden md:flex items-center">
+                    <a href="admin.html" class="nav-btn flex items-center space-x-2 px-5 py-2.5 rounded-full bg-transparent border border-gold-500/30 text-gold-500 font-medium text-sm hover:bg-gold-500 hover:text-dark hover:border-gold-500 transition-all duration-300">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin</span>
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON (HAMBURGUER) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-toggle" class="text-gray-300 hover:text-gold-500 focus:outline-none p-2 rounded-lg hover:bg-white/5 transition-colors duration-200">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE NAV MENU -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gold-500/15 bg-dark-pure/95 backdrop-blur-lg px-4 pt-4 pb-6 space-y-2">
+            <a href="index.html" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/5 hover:text-gold-500 transition">Início</a>
+            <a href="quem-somos.html" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:bg-white/5 hover:text-gold-500 transition">Quem Somos</a>
+            <a href="doacoes.html" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:bg-white/5 hover:text-gold-500 transition">Doações</a>
+            <a href="ajuda.html" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:bg-white/5 hover:text-gold-500 transition">Solicitar Ajuda</a>
+            <hr class="border-white/10 my-2">
+            <a href="admin.html" class="w-full text-left flex items-center space-x-2 px-4 py-3 rounded-xl text-base font-medium text-gold-500 hover:bg-gold-500/10 transition">
+                <i class="fa-solid fa-lock text-sm"></i>
+                <span>Painel Admin</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden" style="background-image: url('[https://images.unsplash.com/photo-1515162305285-0293e4767cc2?q=80&w=2071&auto=format&fit=crop](https://images.unsplash.com/photo-1515162305285-0293e4767cc2?q=80&w=2071&auto=format&fit=crop)');">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-pure/90 via-dark-pure/80 to-dark-pure/90 z-10"></div>
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative z-20 max-w-5xl mx-auto px-4 text-center mt-10">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-[0.2em] text-gold-500 bg-gold-500/10 border border-gold-500/20 rounded-full uppercase">
+                    Igreja Família Filadélfia
+                </span>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Um lugar de <br class="hidden sm:inline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-200 to-gold-500 text-glow">pertencimento e fé.</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-base sm:text-xl text-gray-300 font-light leading-relaxed mb-10">
+                    “Centralizados em Jesus, movidos pelo amor.”
+                </p>
+                <div class="flex justify-center">
+                    <a href="quem-somos.html" class="px-10 py-4 rounded-full bg-gold-500 text-dark font-semibold shadow-lg shadow-gold-500/20 hover:bg-gold-400 hover:shadow-gold-500/40 transition-all duration-300">
+                        Conhecer Igreja
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE RESUMO -->
+        <section class="py-24 bg-dark-pure relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-gold-500/10 rounded-3xl blur-2xl"></div>
+                        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2074&auto=format&fit=crop" alt="Adoração" class="rounded-3xl shadow-2xl relative z-10 border border-white/10">
+                        <div class="absolute -bottom-6 -right-6 bg-gold-500 text-dark p-6 rounded-3xl shadow-xl z-20 hidden sm:block max-w-[240px]">
+                            <p class="text-3xl font-extrabold">+25 Anos</p>
+                            <p class="text-xs font-semibold uppercase tracking-wider text-dark/80 mt-1">Semeando o Evangelho e acolhendo famílias.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">ACOLHIMENTO INTEGRAL</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-6">Uma igreja cristocêntrica e pentecostal contemporânea</h2>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Na **Igreja Família Filadélfia**, acreditamos na simplicidade e reverência de sermos guiados pelo Espírito Santo. Nossa busca é fundamentada na autoridade suprema das Escrituras, expressando uma fé viva, calorosa e transformadora.
+                        </p>
+                        <p class="text-gray-400 leading-relaxed mb-8">
+                            Aqui, você encontrará um ambiente contemporâneo, acolhedor e focado no amadurecimento espiritual de toda a família. Viva a comunhão e o mover de Deus conosco.
+                        </p>
+                        <a href="quem-somos.html" class="inline-flex items-center space-x-2 text-gold-500 font-medium group hover:text-gold-400 transition-colors">
+                            <span>Ver nossa história e crenças</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PILARES -->
+        <section class="py-20 bg-dark relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">A VIDA NA IGREJA</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Nosso Caminho de Fé</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Comunhão -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Comunhão</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Conexão verdadeira entre irmãos. Um ambiente de aceitação onde dividimos a jornada.</p>
+                    </div>
+                    <!-- Oração -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-hands-praying"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Oração</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Busca fervorosa pela presença de Deus. Nossa fonte de força espiritual e intimidade.</p>
+                    </div>
+                    <!-- Famílias -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-house-chimney-user"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Famílias</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Edificação do lar sob princípios cristãos. Cuidado para que as famílias cresçam fortes.</p>
+                    </div>
+                    <!-- Ação Social -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Ação Social</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">O amor em ação prática. Projetos sociais e doações direcionados aos necessitados.</p>
+                    </div>
+                    <!-- Discipulado -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Discipulado</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Crescimento constante no conhecimento bíblico e maturidade em Cristo.</p>
+                    </div>
+                    <!-- Avivamento -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-14 h-14 bg-gold-500/10 text-gold-500 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Avivamento</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">A atuação real e inspiradora do Espírito Santo, despertando nossa geração.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: EVENTOS E NOTÍCIAS -->
+        <section class="py-24 bg-dark-pure relative border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-semibold tracking-[0.2em] text-gold-500 uppercase">FIQUE POR DENTRO</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Eventos & Notícias</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- EVENTOS -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
+                            <i class="fa-regular fa-calendar-days text-gold-500"></i> Próximos Eventos
+                        </h3>
+                        <div class="glass-card p-5 rounded-2xl flex gap-4 items-center">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gold-500/10 border border-gold-500/20 rounded-xl flex flex-col items-center justify-center text-center">
+                                <span class="text-gold-500 font-extrabold text-lg">24</span>
+                                <span class="text-gray-400 font-medium text-[10px] uppercase mt-1">MAI</span>
+                            </div>
+                            <div>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-gold-500/10 text-gold-500 border border-gold-500/20 uppercase">Culto</span>
+                                <h4 class="text-white font-bold text-sm mt-1.5">Noite de Clamor & Avivamento</h4>
+                                <p class="text-gray-400 text-xs mt-1">Domingo às 19:00h - Templo Principal</p>
+                            </div>
+                        </div>
+                        <div class="glass-card p-5 rounded-2xl flex gap-4 items-center">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gold-500/10 border border-gold-500/20 rounded-xl flex flex-col items-center justify-center text-center">
+                                <span class="text-gold-500 font-extrabold text-lg">30</span>
+                                <span class="text-gray-400 font-medium text-[10px] uppercase mt-1">MAI</span>
+                            </div>
+                            <div>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase">Social</span>
+                                <h4 class="text-white font-bold text-sm mt-1.5">Ação de Distribuição de Cestas</h4>
+                                <p class="text-gray-400 text-xs mt-1">Sábado às 09:00h - Ponto de Encontro</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TABELA DE NOTÍCIAS -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
+                            <i class="fa-regular fa-newspaper text-gold-500"></i> Quadro de Notícias
+                        </h3>
+                        <div class="glass-card rounded-2xl overflow-hidden border border-white/5">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm">
+                                    <thead class="bg-white/5 text-gray-300 font-semibold text-xs uppercase border-b border-white/10">
+                                        <tr>
+                                            <th class="px-6 py-4">Notícia / Comunicado</th>
+                                            <th class="px-6 py-4 text-right">Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-white/5 text-gray-300">
+                                        <tr class="hover:bg-white/5 transition-colors">
+                                            <td class="px-6 py-4">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="w-2 h-2 rounded-full bg-gold-500 shrink-0"></span>
+                                                    <div>
+                                                        <p class="text-white font-semibold">Novo Templo em Fase Final de Acabamento</p>
+                                                        <p class="text-gray-400 text-xs">Reforma principal está 90% concluída...</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="px-6 py-4 text-right">
+                                                <button onclick="showSuccessModal('Novo Templo', 'A reforma do nosso novo templo principal está 90% concluída! Teremos cadeiras novas, sonorização acústica inteligente e climatização prontas em breve.')" class="px-3 py-1 bg-white/5 hover:bg-gold-500 hover:text-dark text-white rounded-lg text-xs font-semibold transition">Ler</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-pure border-t border-white/10 pt-16 pb-8 text-sm text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-white flex items-center justify-center border border-gold-500/30">
+                            <img src="image_394705.png" alt="Logo" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-white font-extrabold tracking-wide uppercase">Família Filadélfia</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">“Centralizados em Jesus, movidos pelo amor.”</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase mb-6">Atalhos</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><a href="index.html" class="hover:text-gold-500">Início</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-gold-500">Quem Somos</a></li>
+                        <li><a href="doacoes.html" class="hover:text-gold-500">Doações</a></li>
+                        <li><a href="ajuda.html" class="hover:text-gold-500">Solicitar Ajuda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase mb-6">Nossas Reuniões</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li><span class="text-white font-medium block">Tarde Conecta</span> Segunda às 15h00</li>
+                        <li><span class="text-white font-medium block">Culto de Campanhas</span> Quinta às 20h00</li>
+                        <li><span class="text-white font-medium block">Culto da Família</span> Domingo às 10h00 e às 18h00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase mb-6">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/igrejafamiliafiladelfia/" target="_blank" class="w-9 h-9 bg-white/5 border border-white/10 hover:text-gold-500 rounded-full flex items-center justify-center text-sm transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-white/10 my-8">
+            <p class="text-xs text-center">© 2026 Igreja Família Filadélfia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-11 h-11 bg-gold-500 text-dark rounded-full shadow-lg hover:bg-gold-400 transition flex items-center justify-center opacity-0 pointer-events-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- MODAL DE SUCESSO -->
+    <div id="modal-success" class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-dark-pure/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-md w-full p-8 rounded-3xl text-center border-2 border-gold-500/30">
+            <div class="w-16 h-16 bg-gold-500/10 text-gold-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-2" id="modal-title">Enviado!</h3>
+            <p class="text-gray-300 text-sm mb-8" id="modal-message"></p>
+            <button onclick="closeSuccessModal()" class="w-full py-3.5 bg-gold-500 text-dark font-semibold rounded-xl">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Importa o JavaScript correspondente -->
+    <script src="script.js"></script>
+</body>
+</html>
