@@ -553,3 +553,39 @@ function approveRequestFromDetail() {
         showSuccessModal("Pedido Aprovado", "A solicitação foi deferida com sucesso. O sistema disparou as notificações internas para separação de donativos.");
     }
 }
+function rejectRequest() {
+
+    if (!activeDetailId) return;
+
+    const motivo = prompt("Informe o motivo da reprovação:");
+
+    if (!motivo) return;
+
+    const requests =
+        JSON.parse(localStorage.getItem("helpRequests")) || [];
+
+    const index =
+        requests.findIndex(r => r.id === activeDetailId);
+
+    if (index !== -1) {
+
+        requests[index].status = "Reprovado";
+        requests[index].motivo = motivo;
+
+        localStorage.setItem(
+            "helpRequests",
+            JSON.stringify(requests)
+        );
+
+        closeDetailModal();
+
+        renderAdminTable();
+
+        updateAdminStats();
+
+        showSuccessModal(
+            "Solicitação Reprovada",
+            "A solicitação foi reprovada com sucesso."
+        );
+    }
+}

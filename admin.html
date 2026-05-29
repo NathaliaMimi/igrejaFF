@@ -143,6 +143,97 @@
                 </div>
             </div>
         </section>
+        <!-- CADASTRO DE DOAÇÕES -->
+<section class="py-10 bg-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-8 rounded-3xl">
+<h3 class="text-xl font-bold text-white mb-6">
+<i class="fa-solid fa-hand-holding-heart text-gold-500"></i>
+ Cadastro de Doações
+</h3>
+
+<div class="grid md:grid-cols-3 gap-4">
+<input type="text" placeholder="Nome do Doador"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+<input type="text" placeholder="Item"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+<input type="number" placeholder="Quantidade"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+</div>
+
+<button class="mt-5 px-6 py-3 bg-gold-500 text-dark rounded-xl font-semibold">
+Cadastrar Doação
+</button>
+
+</div>
+</div>
+</section>
+
+<!-- CADASTRO DE EVENTOS -->
+<section class="py-10 bg-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-8 rounded-3xl">
+
+<h3 class="text-xl font-bold text-white mb-6">
+<i class="fa-solid fa-calendar-days text-blue-500"></i>
+ Cadastro de Eventos
+</h3>
+
+<div class="grid md:grid-cols-2 gap-4">
+
+<input type="text" placeholder="Título do Evento"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+<input type="date"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+<input type="time"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+<input type="text" placeholder="Local"
+class="bg-dark-input border border-white/10 rounded-xl p-3 text-white">
+
+</div>
+
+<textarea rows="4"
+placeholder="Descrição"
+class="w-full mt-4 bg-dark-input border border-white/10 rounded-xl p-3 text-white"></textarea>
+
+<button class="mt-5 px-6 py-3 bg-gold-500 text-dark rounded-xl font-semibold">
+Salvar Evento
+</button>
+
+</div>
+</div>
+</section>
+
+<!-- CADASTRO DE NOTÍCIAS -->
+<section class="py-10 bg-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-8 rounded-3xl">
+
+<h3 class="text-xl font-bold text-white mb-6">
+<i class="fa-solid fa-newspaper text-purple-500"></i>
+ Publicar Notícia
+</h3>
+
+<input type="text"
+placeholder="Título da Notícia"
+class="w-full bg-dark-input border border-white/10 rounded-xl p-3 text-white mb-4">
+
+<textarea rows="5"
+placeholder="Conteúdo da notícia"
+class="w-full bg-dark-input border border-white/10 rounded-xl p-3 text-white"></textarea>
+
+<button class="mt-5 px-6 py-3 bg-gold-500 text-dark rounded-xl font-semibold">
+Publicar
+</button>
+
+</div>
+</div>
+</section>
     </main>
 
     <!-- MODAL DETALHE (VISUALIZAR DETALHADO) -->
@@ -154,9 +245,28 @@
                 <!-- Preenchido dinamicamente -->
             </div>
             <div class="mt-8 flex justify-end space-x-3">
-                <button onclick="closeDetailModal()" class="px-5 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded-xl">Fechar</button>
-                <button onclick="approveRequestFromDetail()" class="px-5 py-2.5 bg-gold-500 text-dark font-medium rounded-xl" id="btn-approve-action">Aprovar Pedido</button>
-            </div>
+                <div class="mt-8 flex justify-end space-x-3">
+
+<button
+onclick="closeDetailModal()"
+class="px-5 py-2.5 bg-white/5 hover:bg-white/10 text-white rounded-xl">
+Fechar
+</button>
+
+<button
+onclick="rejectRequest()"
+class="px-5 py-2.5 bg-red-600 text-white rounded-xl">
+Reprovar
+</button>
+
+<button
+onclick="approveRequestFromDetail()"
+class="px-5 py-2.5 bg-gold-500 text-dark font-medium rounded-xl"
+id="btn-approve-action">
+Aprovar Pedido
+</button>
+
+</div>
         </div>
     </div>
 

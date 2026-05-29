@@ -53,3 +53,63 @@ input:focus, select:focus, textarea:focus {
     border-color: #D4AF37 !important;
     box-shadow: 0 0 0 1px #D4AF37 !important;
 }
+.admin-section{
+    margin-top:40px;
+}
+
+.admin-title{
+    color:#fff;
+    font-size:1.5rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.admin-input{
+    width:100%;
+    padding:12px;
+    border-radius:12px;
+    background:#2D2D2D;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.admin-input:focus{
+    border-color:#D4AF37;
+}
+
+.admin-btn{
+    background:#D4AF37;
+    color:#121212;
+    padding:12px 20px;
+    border:none;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.admin-btn:hover{
+    background:#e3b522;
+}
+
+.admin-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.admin-table th{
+    background:rgba(255,255,255,.05);
+    color:#fff;
+    padding:14px;
+}
+
+.admin-table td{
+    padding:14px;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
